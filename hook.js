@@ -4,9 +4,9 @@ XMLHttpRequest.prototype.open = function(method, url) {
     let _onreadystatechange = this.onreadystatechange;
     let that = this;
 
-    this.addEventListener('readystatechange', function() {
+    that.addEventListener('readystatechange', function() {
         if (this.readyState === 4) {
-            console.log(this.responseText);
+            console.log('hook response', this.responseText);
 
             // 如果想修改返回值，可以在这里修改
             // let  response = that.responseText
